@@ -7,7 +7,7 @@ from web.curso.rest import Curso
 def index(_write_tmpl):
     query = Curso.query().order(-Curso.nome)
     dct = {'lista_cursos': query.fetch(),
-           'um_valor':10}
+           'um_valor': 10}
     _write_tmpl('/templates/curso_listar.html', dct)
 
 
